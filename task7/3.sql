@@ -1,8 +1,4 @@
 use finance1;
-
--- 在金融应用场景数据库中，编程实现一个转账操作的存储过程sp_transfer_balance，实现从一个帐户向另一个帐户转账。
--- 请补充代码完成该过程：
-
 delimiter $$
 create procedure sp_transfer(
     IN applicant_id int,      
@@ -42,5 +38,4 @@ BEGIN
     update bank_card set b_balance = b_balance + rcv_amount where b_number = dest_card_id;
     set return_code = 1;
 END$$
-
 delimiter ;

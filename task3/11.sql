@@ -6,4 +6,4 @@ FROM client
 WHERE c_name LIKE '黄%'
 GROUP BY c_id
 ORDER BY number_of_cards DESC,
-    c_id
+    c_id;

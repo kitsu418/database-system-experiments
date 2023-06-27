@@ -1,6 +1,5 @@
 use finance1;
 drop trigger if exists before_property_inserted;
--- 请在适当的地方补充代码，完成任务要求：
 delimiter $$
 CREATE TRIGGER before_property_inserted BEFORE INSERT ON property
 FOR EACH ROW 
@@ -27,5 +26,4 @@ BEGIN
         signal sqlstate "45000" set message_text = msg;
     end if;
 END$$
- 
 delimiter ;
